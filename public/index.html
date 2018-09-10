@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+      html, body {
+        font-size: 10px;
+      }
+
+      * {
+        list-style: none;
+      }
+
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+      body h1, body h2, body h3, body h4, body h5, body h6 {
+        font-family: 'Open Sans', sans-serif;
+      }
+      body main > section {
+        padding: 52px 22px;
+      }
+      body main .icon-title {
+        font-size: 0;
+      }
+      body main .icon-title fa, body main .icon-title h3, body main .icon-title div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      body main .icon-title h3 {
+        text-transform: uppercase;
+        margin-left: 12px;
+        font-weight: bold;
+      }
+      body main .info-content {
+        padding: 0 32px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      body main .info-content p {
+        font-size: 14px;
+        text-align: justify;
+        color: inherit;
+      }
+      body main .info-content ul.list-icons {
+        list-style: none;
+        margin: 0;
+      }
+      body main .info-content ul.list-icons li {
+        margin: 30px 0;
+      }
+      body main .info-content ul.list-icons li:first-child {
+        padding-top: 10px;
+      }
+      body main .info-content ul.list-icons li:last-child {
+        padding-bottom: 10px;
+      }
+      body main .info-content ul li div, body main .info-content ul li p {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      body main .info-content ul li p {
+        margin: 0;
+        margin-left: 12px;
+      }
+      body main #left-side {
+        background: #3f5771;
+      }
+      body main #left-side .name, body main #left-side .job-titles {
+        color: white;
+        text-align: center;
+      }
+      body main #left-side .name {
+        text-transform: uppercase;
+      }
+      body main #left-side .job-titles {
+        margin-bottom: 60px;
+      }
+      body main #left-side .hexagon-container {
+        position: relative;
+        height: 140px;
+        margin-bottom: 24px;
+      }
+      body main #left-side .hexagon-container .hexagon {
+        position: absolute;
+        overflow: hidden;
+        width: 140px;
+        height: 140px;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 auto;
+        -moz-transform: rotate(-30deg) skewX(30deg) scaleY(0.866);
+        -ms-transform: rotate(-30deg) skewX(30deg) scaleY(0.866);
+        -webkit-transform: rotate(-30deg) skewX(30deg) scaleY(0.866);
+        transform: rotate(-30deg) skewX(30deg) scaleY(0.866);
+        backface-visibility: hidden;
+      }
+      body main #left-side .hexagon-container .hexagon .inner {
+        position: absolute;
+        right: 6.7%;
+        bottom: 0;
+        left: 6.7%;
+        top: 0;
+        -moz-transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
+        -ms-transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
+        -webkit-transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
+        transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
+      }
+      body main #left-side .hexagon-container .hexagon.hexagon-image {
+        z-index: 3;
+        -moz-transform: rotate(-30deg) skewX(30deg) scaleY(0.866) translate(-4px, 4px);
+        -ms-transform: rotate(-30deg) skewX(30deg) scaleY(0.866) translate(-4px, 4px);
+        -webkit-transform: rotate(-30deg) skewX(30deg) scaleY(0.866) translate(-4px, 4px);
+        transform: rotate(-30deg) skewX(30deg) scaleY(0.866) translate(-4px, 4px);
+      }
+      body main #left-side .hexagon-container .hexagon.hexagon-image .inner {
+        background: url(https://73d9135319eafc701a71e272ac40cd1505e6bbb9-www.googledrive.com/host/0B3VxOPeHfwbmeUNYaUVocTRvZ3M);
+        background-size: 120%;
+        background-position: top left;
+        background-repeat: no-repeat;
+      }
+      body main #left-side .hexagon-container .hexagon.hexagon-background {
+        width: 144px;
+        height: 144px;
+        z-index: 2;
+        -moz-transform: rotate(-30deg) skewX(30deg) scaleY(0.866) translate(-2px, 2px);
+        -ms-transform: rotate(-30deg) skewX(30deg) scaleY(0.866) translate(-2px, 2px);
+        -webkit-transform: rotate(-30deg) skewX(30deg) scaleY(0.866) translate(-2px, 2px);
+        transform: rotate(-30deg) skewX(30deg) scaleY(0.866) translate(-2px, 2px);
+      }
+      body main #left-side .hexagon-container .hexagon.hexagon-background .inner {
+        background-color: #FFFFFF;
+      }
+      body main #left-side .hexagon-container .hexagon.hexagon-background-dark {
+        width: 148px;
+        height: 148px;
+      }
+      body main #left-side .hexagon-container .hexagon.hexagon-background-dark .inner {
+        background-color: #2d3e50;
+      }
+      body main #left-side .icon-title fa, body main #left-side .icon-title h3, body main #left-side .icon-title div {
+        color: white;
+      }
+      body main #left-side .info-content {
+        color: #fff;
+      }
+      body main #left-side .info-content ul.list-skills li {
+        margin: 16px 0;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      body main #left-side .info-content ul li a {
+        color: white;
+      }
+      body main #left-side .hexagon-icon,
+      body main #left-side .hexagon-icon:before,
+      body main #left-side .hexagon-icon:after {
+        border-style: solid;
+        border-color: #fff;
+        border-width: 2px;
+        width: 56px;
+        height: 32px;
+        border-top: none;
+        border-bottom: none;
+      }
+      body main #left-side .hexagon-icon {
+        text-align: center;
+        line-height: 32px;
+        position: relative;
+        z-index: 0;
+      }
+      body main #left-side .hexagon-icon:before, body main #left-side .hexagon-icon:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -2px;
+        z-index: -1;
+      }
+      body main #left-side .hexagon-icon:before {
+        -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        -webkit-transform: rotate(60deg);
+        transform: rotate(60deg);
+      }
+      body main #left-side .hexagon-icon:after {
+        -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+        -webkit-transform: rotate(-60deg);
+        transform: rotate(-60deg);
+      }
+      body main #left-side .hexagon-icon .fa {
+        color: #fff;
+        font-size: 28px;
+        line-height: 32px;
+      }
+      body main #left-side .hexagon-icon-fill-small,
+      body main #left-side .hexagon-icon-fill-small:before,
+      body main #left-side .hexagon-icon-fill-small:after {
+        border-style: solid;
+        border-color: #fff;
+        border-width: 1px;
+        width: 38px;
+        height: 22px;
+        background: #fff;
+        border-top: none;
+        border-bottom: none;
+      }
+      body main #left-side .hexagon-icon-fill-small {
+        text-align: center;
+        line-height: 22px;
+        position: relative;
+        z-index: 0;
+      }
+      body main #left-side .hexagon-icon-fill-small:before, body main #left-side .hexagon-icon-fill-small:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -1px;
+        z-index: -1;
+      }
+      body main #left-side .hexagon-icon-fill-small:before {
+        -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        -webkit-transform: rotate(60deg);
+        transform: rotate(60deg);
+      }
+      body main #left-side .hexagon-icon-fill-small:after {
+        -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+        -webkit-transform: rotate(-60deg);
+        transform: rotate(-60deg);
+      }
+      body main #left-side .hexagon-icon-fill-small .fa {
+        color: #2d3e50;
+        font-size: 22px;
+        line-height: 22px;
+      }
+      body main #right-side {
+        padding-top: 70px;
+        padding-bottom: 0;
+      }
+      body main #right-side .icon-title fa, body main #right-side .icon-title h3, body main #right-side .icon-title div {
+        color: #2d3e50;
+      }
+      body main #right-side .info-content {
+        color: #2d3e50;
+      }
+      body main #right-side .info-content ul.list-experience {
+        list-style: none;
+      }
+      body main #right-side .info-content ul.list-experience li {
+        margin: 20px 0;
+        list-style: none;
+      }
+      body main #right-side .info-content ul.list-experience label {
+        font-size: 16px;
+        color: #2d3e50;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      body main #right-side .info-content ul.list-experience label:before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #2d3e50;
+        display: none;
+        list-style: none;
+        margin-left: -18px;
+        margin-right: 8px;
+      }
+      body main #right-side .info-content ul.list-experience span {
+        font-weight: 300;
+        color: #a7a7a7;
+        font-size: 12px;
+      }
+      body main #right-side .info-content ul.list-experience p {
+        display: block;
+        margin-left: 0;
+        color: black;
+        text-transform: none;
+      }
+      body main #right-side .info-content ul.list-experience.works label {
+        color: black;
+        text-transform: none;
+        font-weight: normal;
+        letter-spacing: 0;
+      }
+      body main #right-side .info-content ul.list-experience.works label a {
+        font-size: 12px;
+        color: #527191;
+      }
+      body main #right-side .info-content ul.references {
+        list-style: none;
+        margin: 0;
+      }
+      body main #right-side .info-content ul.references li {
+        overflow: hidden;
+      }
+      body main #right-side .info-content ul.references li:after {
+        content: '\2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  ';
+        font-size: 25px;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: Arial;
+        letter-spacing: -1px;
+      }
+      body main #right-side .info-content ul.references li:last-child:after {
+        content: '';
+      }
+      body main #right-side .info-content ul.references li:last-child .reference-info {
+        margin-bottom: 25px;
+      }
+      body main #right-side .info-content ul.references li:first-child h3 {
+        margin-top: 0;
+      }
+      body main #right-side .info-content ul.references h3 {
+        margin-top: 35px;
+        text-align: center;
+      }
+      body main #right-side .info-content ul.references .reference-info {
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 45px;
+      }
+      body main #right-side .info-content ul.references .reference-info p {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+      body main #right-side .info-content ul.references .reference-info p a {
+        color: #527191;
+      }
+      body main #right-side .hexagon-icon,
+      body main #right-side .hexagon-icon:before,
+      body main #right-side .hexagon-icon:after {
+        border-style: solid;
+        border-color: #2d3e50;
+        border-width: 2px;
+        width: 56px;
+        height: 32px;
+        border-top: none;
+        border-bottom: none;
+      }
+      body main #right-side .hexagon-icon {
+        text-align: center;
+        line-height: 32px;
+        position: relative;
+        z-index: 0;
+      }
+      body main #right-side .hexagon-icon:before, body main #right-side .hexagon-icon:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -2px;
+        z-index: -1;
+      }
+      body main #right-side .hexagon-icon:before {
+        -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        -webkit-transform: rotate(60deg);
+        transform: rotate(60deg);
+      }
+      body main #right-side .hexagon-icon:after {
+        -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+        -webkit-transform: rotate(-60deg);
+        transform: rotate(-60deg);
+      }
+      body main #right-side .hexagon-icon .fa {
+        color: #2d3e50;
+        font-size: 28px;
+        line-height: 32px;
+      }
+      body main #right-side .hexagon-icon-fill-small,
+      body main #right-side .hexagon-icon-fill-small:before,
+      body main #right-side .hexagon-icon-fill-small:after {
+        border-style: solid;
+        border-color: #2d3e50;
+        border-width: 1px;
+        width: 38px;
+        height: 22px;
+        background: #2d3e50;
+        border-top: none;
+        border-bottom: none;
+      }
+      body main #right-side .hexagon-icon-fill-small {
+        text-align: center;
+        line-height: 22px;
+        position: relative;
+        z-index: 0;
+      }
+      body main #right-side .hexagon-icon-fill-small:before, body main #right-side .hexagon-icon-fill-small:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -1px;
+        z-index: -1;
+      }
+      body main #right-side .hexagon-icon-fill-small:before {
+        -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+        -webkit-transform: rotate(60deg);
+        transform: rotate(60deg);
+      }
+      body main #right-side .hexagon-icon-fill-small:after {
+        -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+        -webkit-transform: rotate(-60deg);
+        transform: rotate(-60deg);
+      }
+      body main #right-side .hexagon-icon-fill-small .fa {
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 22px;
+      }
+
+      /*Movil*/
+      @media only screen and (max-width: 40em) {
+        body main .do-toggle {
+          right: 0;
+          margin-top: -20px;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+        }
+        body main .toggle-title + .info-content {
+          display: none;
+        }
+        body main .toggle-title {
+          position: relative;
+          margin-bottom: 40px;
+        }
+        body main .toggle-title h3 {
+          max-width: 75%;
+        }
+        body main #left-side {
+          padding-bottom: 0;
+        }
+        body main #left-side .do-toggle {
+          color: white;
+        }
+        body main #left-side .toggle-title:last-of-type {
+          margin-bottom: 0;
+        }
+        body main #right-side {
+          padding-top: 35px;
+        }
+        body main #right-side .do-toggle {
+          color: #2d3e50;
+        }
+      }
+      /*iPad*/
+      @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+        body main .info-content {
+          padding: 0 8px;
+        }
+        body main > section {
+          padding: 52px 18px;
+        }
+        body main .info-content ul.list-icons {
+          list-style: none;
+          margin: 0;
+          text-align: left;
+          margin-left: 0%;
+          display: table;
+        }
+      }
+      @media only screen and (min-width: 40em) {
+        body main .info-content ul.list-icons {
+          margin-left: 0%;
+          left: 0;
+        }
+      }
+
+      body main #left-side .hexagon-icon-fill-small, body main #left-side .hexagon-icon-fill-small:before, body main #left-side .hexagon-icon-fill-small:after {
+        margin: 0 !important;
+      }
+      /* .info-content .list-icons #phone_icon { margin-left: 7.5vw !important; }
+      .info-content .list-icons #linkedin_icon { margin-left: -2.5vw !important; } */
+      /* @media only screen and (max-width: 39.9375em) {
+        ul.list-icons {
+          margin-left: 7% !important;
+        }
+        body main #left-side .hexagon-icon-fill-small {
+          float: left !important;
+          left: 0;
+          margin-left: 0;
+        }
+      }
+      @media only screen and (max-width: 364px) {
+        .visible-sm {
+          display: block;
+          visibility: visible;
+        }
+
+        .list-icon-first {
+          margin-left: 2.5% !important;
+        }
+        .list-icon-second {
+          margin-left: -10.5% !important;
+        }
+        .list-icon-third {
+          margin-left: 6.5% !important;
+        }
+        .list-icon-fourth {
+          margin-left: -40% !important;
+        }
+
+        ul.list-icons, ul.list-icons li {
+          margin-left: 7% !important;
+        }
+        ul.list-icons .hexagon-icon-fill-small, ul.list-icons li .hexagon-icon-fill-small {
+          left: -20% !important;
+          margin-top: 3%;
+          bottom: 2.5%;
+        }
+        ul.list-icons p, ul.list-icons li p {
+          margin-top: 2%;
+        }
+      }
+      @media only screen and (max-width: 595px) {
+        .visible-sm {
+          display: block;
+          visibility: visible;
+        }
+
+        .list-icon-first {
+          margin-left: 2.5% !important;
+        }
+        .list-icon-second {
+          margin-left: -5.5% !important;
+        }
+        .list-icon-third {
+          margin-left: 5.5% !important;
+        }
+        .list-icon-fourth {
+          margin-left: -25% !important;
+        }
+
+        ul.list-icons, ul.list-icons li {
+          margin-left: 7% !important;
+        }
+        ul.list-icons .hexagon-icon-fill-small, ul.list-icons li .hexagon-icon-fill-small {
+          left: -20% !important;
+          margin-top: 3%;
+          bottom: 2.5%;
+        }
+        ul.list-icons p, ul.list-icons li p {
+          margin-top: 2%;
+        }
+      }
+      @media only screen and (min-width: 596px) and (max-width: 798px) {
+        .visible-sm {
+          display: block;
+          visibility: visible;
+        }
+
+        .list-icon-first {
+          margin-left: 2.5% !important;
+        }
+        .list-icon-second {
+          margin-left: -5.5% !important;
+        }
+        .list-icon-third {
+          margin-left: 5.5% !important;
+        }
+        .list-icon-fourth {
+          margin-left: -25% !important;
+        }
+
+        ul.list-icons, ul.list-icons li {
+          margin-left: 7% !important;
+        }
+        ul.list-icons .hexagon-icon-fill-small, ul.list-icons li .hexagon-icon-fill-small {
+          left: -20% !important;
+          margin-top: 3%;
+          bottom: 2.5%;
+        }
+        ul.list-icons p, ul.list-icons li p {
+          margin-top: 2%;
+        }
+      }
+      @media only screen and (min-width: 799px) and (max-width: 1020px) {
+        .visible-sm {
+          display: block;
+          visibility: visible;
+        }
+
+        .list-icon-first {
+          margin-left: 4.5% !important;
+        }
+        .list-icon-second {
+          margin-left: 4.5% !important;
+        }
+        .email_mailto {
+          float: right;
+          margin-left: 5%;
+        }
+        .list-icon-third {
+          margin-left: 5% !important;
+        }
+        .list-icon-fourth {
+          margin-left: 5% !important;
+        }
+
+        ul.list-icons, ul.list-icons li {
+          margin-left: 7% !important;
+        }
+        ul.list-icons .hexagon-icon-fill-small, ul.list-icons li .hexagon-icon-fill-small {
+          left: -20% !important;
+          margin-top: 3%;
+          bottom: 2.5%;
+        }
+        ul.list-icons p, ul.list-icons li p {
+          margin-top: 2%;
+        }
+      }
+      @media only screen and (min-width: 1021px) and (max-width: 1398px) { */
+        .visible-sm {
+          display: block;
+          visibility: visible;
+        }
+
+        .list-icon-first {
+          margin-left: 4.5% !important;
+        }
+        .list-icon-second {
+          margin-left: -8.5% !important;
+        }
+        .list-icon-third {
+          margin-left: 8% !important;
+        }
+        .list-icon-fourth {
+          margin-left: -38% !important;
+        }
+
+        ul.list-icons, ul.list-icons li {
+          margin-left: 7% !important;
+        }
+        ul.list-icons .hexagon-icon-fill-small, ul.list-icons li .hexagon-icon-fill-small {
+          left: -20% !important;
+          margin-top: 3%;
+          bottom: 2.5%;
+        }
+        ul.list-icons p, ul.list-icons li p {
+          margin-top: 2%;
+        }
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <script scrc="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation.min.css" integrity="sha256-iJQ8dZac/jUYHxiEnZJsyVpKcdq2sQvdA7t02QFmp30= sha384-SplqNBo/0ZlvSdwrP/riIPDozO5ck8+yIm++KVqyMAC53S6m3BaV+2OLpi7ULOOh sha512-ho6hK4sAWdCeqopNZWNy1d9Ok2hzfTLQLcGSr8ZlRzDzh6tNHkVoqSl6wgLsqls3yazwiG9H9dBCtSfPuiLRCQ==" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/js/foundation.min.js" integrity="sha256-G6jsRyH1fxbsvFIXSCuwYmI1aIDYBa28xscrvmYjJy0= sha384-vtoG68NvPc9azmFJr447vvY8qgdyA4FdaJ5/bqvzIM4eAdZfO0iyRRF8l2AAscYI sha512-43seCcNrHA0BQgrtyajB9sp8yOdv5c8QdYvgjP7zJ7v+dmzAcxYDQ2gupb9aztsNWBq1COIp/3NHYkQs4l/dkg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation-float.min.css" integrity="sha256-SXzNzz68b8cy/1oRvdP128/5VlvegrZO5QDmBiqhlQc= sha384-5EVTk1nWllg1T/XoVEd82fhnOxUhRUOquz4AyO3+M0kbhUzhruouReQWPnihRxPs sha512-y0IHToRgzE99SfoteKLXR0MUOTRPMQHwc4nmU2/Uqhu4KulOzK18RbuicuhlgzPDdj23skwxTWUv7CJs+psXig==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation-prototype.min.css" integrity="sha256-iP8NlnMIi6jl4DMvyYpLbsqyWDYl1Q8tVZveKJ/iTlo= sha384-E/I8NnHrg+VfwywRTDOqIKYxhzeffpdDsimI5Nquhpn2CeyKxcx4nXrzzI5gHrop sha512-GX5/wNoFVsGHdYirCCCrvWYFBsB/O+gK+7XOcAnd5fGLh8L3s1D0Zh6rVvRA6nKtnzyTEp4y12fSejpSvTOCeA==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation-rtl.min.css" integrity="sha256-80rANnp5GyEv0uG8KN9vvV/bVcFIraHVWPi5x+gxVeo= sha384-aYblAem3RHdEnPvfqN2QS+Ha8P+pBBtb38g0BXaoBz6D7W2N3tliaJOrKtm3R/Aj sha512-7N+idIc9dM7Insu/knBFhfRMQ+mog/niglz38GYI54HN6UnZkASL/IUwKVuq1X52k3K4XwBhEY2GpCIDnZOGmA==" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Isaac Bell - Full Stack Developer</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
