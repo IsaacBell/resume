@@ -5,11 +5,9 @@ import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
-import logo from './ib-logo.jpeg';
 import './App.css';
 import './index.scss';
 
-import $ from 'jquery';
 import Trianglify from 'trianglify';
 import registerServiceWorker from './registerServiceWorker';
 
